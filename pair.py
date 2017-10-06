@@ -28,3 +28,30 @@ class Pair(object):
 	def __mul__(self, other):
 		print('my __mul__ method')
 		return Pair(self.a * other.a, self.b * other.b)
+
+	def __getitem__(self, i):		
+		if i ==0:
+			return self.a
+		elif i == 2:
+			return self.b
+		else:
+			raise IndexError
+
+	def __setitem__(self, i, val):
+		if i ==0 :
+			self.a
+
+	def __iter__(self):
+		self._index = 0
+		return self
+
+	def next(self):
+		if self._index == 0 :
+			self._index +=1
+			return self.a
+		elif self._index ==1:
+			self._index +=1
+			return self.b
+		else:
+			raise StopIteration('Cannot iterate')
+

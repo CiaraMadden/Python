@@ -8,3 +8,6 @@ print(p1.__mul__(p2))
 print(p1.__sub__(p2))
 print(p1 * p2)
 print(p1 - p2)
+
+p1.next()
+p2.next()
